@@ -46,3 +46,4 @@ use`git branch -a` to see all your branches`
 
 divergence in commits has to do with 'state' at that time and where the next commit took place
 
+My favorite movie is GATTACA. 
