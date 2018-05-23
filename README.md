@@ -36,3 +36,11 @@ pring (v)
 ```
 won't run the code, will just print it nicely. 
 when highlighted, will have syntax for the language 
+
+intro to git branching
+use ` git branch BRANCH_NAME` or `git checkout -b BRANCH_NAME` to create  a branch
+    - if you use `git branch BRANC_NAME` you also need to run `git checkout BRANCH_NAME`
+    - `git branch -b BRANCH_NAME` will create and checkout at the same time
+
+use`git branch -a` to see all your branches`
+
