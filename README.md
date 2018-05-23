@@ -46,4 +46,9 @@ use`git branch -a` to see all your branches`
 
 divergence in commits has to do with 'state' at that time and where the next commit took place
 
-My favorite movie is GATTACA. 
+My favorite movie is GATTACA.
+
+Conflicts: You can edit same file at same time 
+and nothing terrible will happen if 
+the edit occurs in different locations. 
+
