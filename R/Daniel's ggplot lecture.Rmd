@@ -1,0 +1,86 @@
+---
+title: "Untitled"
+author: "Devika Nair"
+date: "5/29/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse) #includes ggplot2
+```
+
+## Data Formats
+
+Difference between tibble & dataframe. Data frames are rectangular datasets.
+Tibbles are data frames, but tweak some older behaviours to make life a littler easier.
+
+Doubles - decimal value 
+Integer - whole numbers
+These designations exist because of the difference in memory required. 
+
+If you hit tab inside the function's parantheses - it shows you the arguments. 
+
+```{r cars}
+mpg
+head(mpg)
+ggplot(data = mpg)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy))
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, size = class))
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, alpha = class)) # alpha - assigns shades of black
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, shape = class), color = 'blue')
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = 'blue') +
+  facet_wrap(~class, nrow = 4)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = 'blue') +
+  facet_grid(drv ~ cyl)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy), color = 'blue') +
+  geom_smooth(mapping = aes(x = displ, y = hwy)) 
+
+```
+
+
+
+```{r}
+table(diamonds$cut)
+library(tibble)
+my_counts <- as_tibble(table(diamonds$cut))
+
+france <- map_data('france')
+
+ggplot(france, aes(long, lat, group = group)) +
+  geom_polygon(fill = 'white', color = 'black') +
+  coord_quickmap()
+
+library(readr)
+
+write_csv(x = diamonds, path = './') # defaults to something, hit tab to find out where
+my_diamonds <- read_csv("~/diamonds.csv")
+
+
+```
+
+
+
+
+
+
+
+
